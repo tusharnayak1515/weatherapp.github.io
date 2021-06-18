@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Weather App</title>
+    <link rel="stylesheet" href="static/css/styles.css">
+</head>
+
+<body id="weatherBody">
+
+    <h1>The weather in <%= city %> is <%= weather %></h1>
+    <h2>The temperature in <%= city %> is <%= temperature %> degree celsius.</h2>
+    <img src="<%= imageUrl %>" alt="">
+
+    <script>
+
+        function getTime() {
+            let date = new Date();
+
+            let hours = date.getHours();
+            let minutes = date.getMinutes();
+            let seconds = date.getSeconds();
+            let weatherDescription = `<%= weather %>`;
+
+            if ((hours >= 6) && (hours < 12)) {
+                if (weatherDescription.includes("rain")) {
+                    document.body.style.background = "url('../static/images/rain-day1.gif') center/cover no-repeat";
+                }
+                else if (weatherDescription.includes("clouds")) {
+                    document.body.style.background = "url('../static/images/clouds-day.gif') center/cover no-repeat";
+                }
+                else if (weatherDescription.includes("thunderstorm")) {
+                    document.body.style.background = "url('../static/images/thunderstorm-day.gif') center/cover no-repeat";
+                }
+                else if (weatherDescription.includes("snow")) {
+                    document.body.style.background = "url('../static/images/snow-day.gif') center/cover no-repeat";
+                    document.body.style.color = "black";
+                }
+                else if ( (weatherDescription.includes("mist")) || (weatherDescription.includes("haze")) ) {
+                    document.body.style.background = "url('../static/images/mist-day.gif') center/cover no-repeat";
+                    document.body.style.color = "black";
+                }
+                else {
+                    document.body.style.background = "url('../static/images/clearday.jpg') center/cover no-repeat";
+                }
+            }
+
+            else if ((hours >= 12) && (hours < 18)) {
+                if (weatherDescription.includes("rain")) {
+                    document.body.style.background = "url('../static/images/rain-day2.gif') center/cover no-repeat";
+                }
+                else if (weatherDescription.includes("clouds")) {
+                    document.body.style.background = "url('../static/images/clouds-day.gif') center/cover no-repeat";
+                }
+                else if (weatherDescription.includes("thunderstorm")) {
+                    document.body.style.background = "url('../static/images/thunderstorm-day.gif') center/cover no-repeat";
+                }
+                else if (weatherDescription.includes("snow")) {
+                    document.body.style.background = "url('../static/images/snow-day.gif') center/cover no-repeat";
+                }
+                else if ( (weatherDescription.includes("mist")) || (weatherDescription.includes("haze")) ) {
+                    document.body.style.background = "url('../static/images/mist-day.gif') center/cover no-repeat";
+                }
+                else {
+                    document.body.style.background = "url('../static/images/clearday.jpg') center/cover no-repeat";
+                }
+            }
+            
+            else if ((hours >= 18) && (hours < 24)) {
+                document.body.style.color = "white";
+                if (weatherDescription.includes("rain")) {
+                    document.body.style.background = "url('../static/images/rain-night1.gif') center/cover no-repeat";
+                }
+                else if (weatherDescription.includes("clouds")) {
+                    document.body.style.background = "url('../static/images/clouds-night.webp') center/cover no-repeat";
+                    document.body.style.color = "black";
+                }
+                else if (weatherDescription.includes("thunderstorm")) {
+                    document.body.style.background = "url('../static/images/thunderstorm-night.webp') center/cover no-repeat";
+                }
+                else if (weatherDescription.includes("snow")) {
+                    document.body.style.background = "url('../static/images/snow-night.gif') center/cover no-repeat";
+                }
+                else if ( (weatherDescription.includes("mist")) || (weatherDescription.includes("haze")) ) {
+                    document.body.style.background = "url('../static/images/mist-night.gif') center/cover no-repeat";
+                    document.body.style.color = "black";
+                }
+                else {
+                    document.body.style.background = "url('../static/images/clear-sky-night.jpg') center/cover no-repeat";
+                }
+            }
+
+            else if ((hours >= 0) && (hours < 6)) {
+                document.body.style.color = "white";
+                if (weatherDescription.includes("rain")) {
+                    document.body.style.background = "url('../static/images/rain-night2.gif') center/cover no-repeat";
+                }
+                else if (weatherDescription.includes("clouds")) {
+                    document.body.style.background = "url('../static/images/clouds-night.webp') center/cover no-repeat";
+                    document.body.style.color = "black";
+                }
+                else if (weatherDescription.includes("thunderstorm")) {
+                    document.body.style.background = "url('../static/images/thunderstorm-night.webp') center/cover no-repeat";
+                }
+                else if (weatherDescription.includes("snow")) {
+                    document.body.style.background = "url('../static/images/snow-night.gif') center/cover no-repeat";
+                }
+                else if ( (weatherDescription.includes("mist")) || (weatherDescription.includes("haze")) ) {
+                    document.body.style.background = "url('../static/images/mist-night.gif') center/cover no-repeat";
+                    document.body.style.color = "black";
+                }
+                else {
+                    document.body.style.background = "url('../static/images/clear-sky-night.jpg') center/cover no-repeat";
+                }
+            }
+        }
+        setInterval(getTime, 1000);
+
+        // rain,clouds,"thunderstorm","snow","mist","clear sky"
+    </script>
+</body>
+
+</html>
+

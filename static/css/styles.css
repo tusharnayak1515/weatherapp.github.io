@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(255, 203, 216);
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(23, 103, 139);
+    min-height: 10vh;
+    position: sticky;
+    top: 0;
+}
+
+#navbar #logo {
+    color: white;
+    font-size: 2vw;
+    margin-left: 2vw;
+    cursor: pointer;
+}
+
+#navbar ul {
+    display: flex;
+    margin-right: 2vw;
+}
+
+#navbar ul li {
+    list-style: none;
+    padding: 1vh 3.5vh;
+}
+
+#navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.4vw;
+}
+
+#content {
+    min-height: 80vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+#content h1 {
+    margin: 2vw 0;
+    font-size: 3.5vw;
+}
+
+#content form {
+    display: flex;
+    flex-direction: column;
+    border: 0.2vh solid black;
+    border-radius: 2vw;
+    padding: 2vw;
+    min-height: 15vh;
+    min-width: 30%;
+    text-align: center;
+    background-color: rgb(231, 249, 255);
+}
+
+#content form h3 {
+    margin-bottom: 2vh;
+    font-size: 2vw;
+}
+
+#content form input {
+    padding: 1.2vh;
+    border-radius: 0.5vh;
+    border: 0.1vh solid grey;
+    margin-bottom: 1.5vw;
+    outline: none;
+    min-width: 20vw;
+}
+
+#content form button {
+    padding: 1.2vh;
+    border-radius: 0.5vh;
+    border: 0.1vh solid grey;
+    outline: none;
+    cursor: pointer;
+    background-color: rgb(23, 103, 139);
+    color: white;
+    font-size: 1vw;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(23, 103, 139);
+    min-height: 10vh;
+    font-size: 1.1vw;
+    color: white;
+    position: sticky;
+    bottom: 0;
+}
+
+#weatherBody {
+    /* background-color: rgb(255, 241, 176); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5vw;
+    min-height: 100vh;
+}
+
+#weatherBody h1 {
+    font-size: 4vw;
+    padding-bottom: 2vh;
+}
+
+#weatherBody h2 {
+    font-size: 3vw;
+    padding-bottom: 2vh;
+}
+
+#weatherBody img {
+    min-height: 8vw;
+    min-width: 8vw;
+}
