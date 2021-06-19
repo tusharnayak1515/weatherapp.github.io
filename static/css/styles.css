@@ -127,3 +127,19 @@ footer {
     min-height: 8vw;
     min-width: 8vw;
 }
+
+/* Error Page  */
+
+#errorContent {
+    min-height: 100vh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    padding-top: 20vh;
+}
+
+#errorContent h1 {
+    color: red;
+    font-size: 3vw;
+}
