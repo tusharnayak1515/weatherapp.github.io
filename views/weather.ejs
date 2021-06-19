@@ -28,12 +28,16 @@
             if ((hours >= 6) && (hours < 12)) {
                 if (weatherDescription.includes("rain")) {
                     document.body.style.background = "url('../static/images/rain-day1.gif') center/cover no-repeat";
+                    var rain = new Audio("../static/sounds/rain.mp3");
+                    rain.play();
                 }
                 else if (weatherDescription.includes("clouds")) {
                     document.body.style.background = "url('../static/images/clouds-day.gif') center/cover no-repeat";
                 }
                 else if (weatherDescription.includes("thunderstorm")) {
                     document.body.style.background = "url('../static/images/thunderstorm-day.gif') center/cover no-repeat";
+                    var thunder = new Audio("../static/sounds/thunderstorm.mp3");
+                    thunder.play();
                 }
                 else if (weatherDescription.includes("snow")) {
                     document.body.style.background = "url('../static/images/snow-day.gif') center/cover no-repeat";
@@ -51,12 +55,16 @@
             else if ((hours >= 12) && (hours < 18)) {
                 if (weatherDescription.includes("rain")) {
                     document.body.style.background = "url('../static/images/rain-day2.gif') center/cover no-repeat";
+                    var rain = new Audio("../static/sounds/rain.mp3");
+                    rain.play();
                 }
                 else if (weatherDescription.includes("clouds")) {
                     document.body.style.background = "url('../static/images/clouds-day.gif') center/cover no-repeat";
                 }
                 else if (weatherDescription.includes("thunderstorm")) {
                     document.body.style.background = "url('../static/images/thunderstorm-day.gif') center/cover no-repeat";
+                    var thunder = new Audio("../static/sounds/thunderstorm.mp3");
+                    thunder.play();
                 }
                 else if (weatherDescription.includes("snow")) {
                     document.body.style.background = "url('../static/images/snow-day.gif') center/cover no-repeat";
@@ -73,6 +81,8 @@
                 document.body.style.color = "white";
                 if (weatherDescription.includes("rain")) {
                     document.body.style.background = "url('../static/images/rain-night1.gif') center/cover no-repeat";
+                    var rain = new Audio("../static/sounds/rain.mp3");
+                    rain.play();
                 }
                 else if (weatherDescription.includes("clouds")) {
                     document.body.style.background = "url('../static/images/clouds-night.webp') center/cover no-repeat";
@@ -80,6 +90,8 @@
                 }
                 else if (weatherDescription.includes("thunderstorm")) {
                     document.body.style.background = "url('../static/images/thunderstorm-night.webp') center/cover no-repeat";
+                    var thunder = new Audio("../static/sounds/thunderstorm.mp3");
+                    thunder.play();
                 }
                 else if (weatherDescription.includes("snow")) {
                     document.body.style.background = "url('../static/images/snow-night.gif') center/cover no-repeat";
@@ -97,6 +109,8 @@
                 document.body.style.color = "white";
                 if (weatherDescription.includes("rain")) {
                     document.body.style.background = "url('../static/images/rain-night2.gif') center/cover no-repeat";
+                    var rain = new Audio("../static/sounds/rain.mp3");
+                    rain.play();
                 }
                 else if (weatherDescription.includes("clouds")) {
                     document.body.style.background = "url('../static/images/clouds-night.webp') center/cover no-repeat";
@@ -104,6 +118,8 @@
                 }
                 else if (weatherDescription.includes("thunderstorm")) {
                     document.body.style.background = "url('../static/images/thunderstorm-night.webp') center/cover no-repeat";
+                    var thunder = new Audio("../static/sounds/thunderstorm.mp3");
+                    thunder.play();
                 }
                 else if (weatherDescription.includes("snow")) {
                     document.body.style.background = "url('../static/images/snow-night.gif') center/cover no-repeat";
